@@ -1,0 +1,55 @@
+import pandas as pd
+
+
+# Data einlesen
+
+#df = pd.read_excel(r'C:\Users\ornel\Desktop\Master_WI\Semester2\Online Retail.xlsx')
+
+# Data  convertieren in CSV
+
+#df.to_csv(r'C:\Users\ornel\Desktop\Master_WI\Semester2\Online Retail.csv', encoding='utf-8')
+
+#print(df)
+
+df = pd.read_csv(r'C:\Users\ornel\Desktop\Master_WI\Semester2\Online Retail.csv')
+
+# Die Spalte "Description" aus dem Dataframe (df) löschen
+
+#df = df.drop(['Description'], axis=1)
+
+# Zeilen mit leere ID entfernen
+
+#df = df.dropna(subset=['CustomerID'])
+
+# Alle Invoice, die Cancelation sind entfernen
+
+#df.drop(df[(df['InvoiceNo'].str.startswith('C'))].index, inplace=True)
+print(df)
+print(df.__len__())
+
+cancellations = df[df['InvoiceNo'].str.startswith('C')]
+
+if cancellations:
+
+ for idx, row in df.iterrows():
+
+         while idx+1 > 0:
+             idx2 = idx
+             if df[[idx2]['customerID'] == df[idx]['customerID'] & df[idx]['StockCode'] & df[idx]['UnitPrice'] & cancellations]
+                 if df[idx2] + cancellations ==0
+
+                    df = df.dropna(subset=['InvoiceNo'] & cancellations)
+                      break
+                 elif if df[idx2] & cancellations > 0 :
+                         df[idx].update(['Quantity'])
+                         drop.cancellations
+                     break
+                 else
+                     df.dropna(subset=['InvoiceNo'].current invoice
+                     update.cancellations
+
+             else
+                    drop.cancellations
+
+
+print(df)
